@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>دار التوابل - بطاقتي التعريفية</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>دار التوابل - البطاقة التعريفية</title>
+  <!-- استدعاء أيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- خط عربي أنيق -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #8B4513; /* بني */
-      --secondary-color: #D2691E; /* بني فاتح */
-      --accent-color: #CD853F; /* بني ذهبي */
-      --text-color: #333;
-      --light-color: #F5F5DC; /* بيج فاتح */
+      --primary-color: #7B3F00; /* بني غامق من الشعار */
+      --secondary-color: #C68642; /* بني فاتح ذهبي */
+      --accent-color: #F4E1C1; /* بيج */
+      --text-color: #2c2c2c;
     }
-    
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      text-align: center; 
-      padding: 20px; 
-      background: linear-gradient(135deg, #f5f5dc 0%, #e6d9c5 100%);
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #fdf8f3 0%, #f2e7da 100%);
       direction: rtl;
       min-height: 100vh;
       display: flex;
@@ -26,20 +28,20 @@
       align-items: center;
       margin: 0;
     }
-    
-    .card { 
-      border: 2px solid var(--primary-color); 
-      padding: 30px; 
-      border-radius: 20px; 
+
+    .card {
+      border: 2px solid var(--primary-color);
+      padding: 30px;
+      border-radius: 20px;
       display: inline-block;
-      background-color: white;
-      box-shadow: 0 10px 30px rgba(139, 69, 19, 0.2);
-      max-width: 480px;
+      background-color: #fff;
+      box-shadow: 0 10px 25px rgba(123, 63, 0, 0.2);
+      max-width: 500px;
       width: 100%;
       position: relative;
       overflow: hidden;
     }
-    
+
     .card::before {
       content: "";
       position: absolute;
@@ -47,121 +49,121 @@
       left: 0;
       right: 0;
       height: 5px;
-      background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--primary-color));
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
     }
-    
+
     .logo-container {
       margin-bottom: 20px;
-      padding: 15px;
-      border-radius: 10px;
-      background-color: rgba(245, 245, 220, 0.3);
     }
-    
+
     .logo {
-      max-width: 180px;
+      max-width: 200px;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-    
-    h1 { 
-      color: var(--primary-color); 
-      margin-bottom: 15px;
+
+    h1 {
+      color: var(--primary-color);
       font-size: 32px;
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 12px;
+      margin-bottom: 10px;
     }
-    
+
     .tagline {
       color: var(--secondary-color);
       font-size: 16px;
-      margin: 10px 0 25px 0;
+      margin-bottom: 25px;
       font-weight: bold;
     }
-    
+
     .contact-info {
-      margin: 20px 0;
+      margin: 25px 0;
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
-    
+
     .contact-card {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 12px 15px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--light-color), #fff);
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      border: 1px solid #ddd;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid #eee;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    
+
     .contact-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
     }
-    
+
     .contact-card span {
-      font-weight: bold;
-      color: var(--primary-color);
-      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-color);
     }
-    
+
     .phone-btn {
       background: var(--primary-color);
       color: white;
       text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 6px;
+      padding: 8px 14px;
+      border-radius: 8px;
       font-size: 14px;
       display: flex;
       align-items: center;
       gap: 6px;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
     }
-    
+
     .phone-btn:hover {
       background: var(--secondary-color);
     }
-    
+
     .social-links {
-      margin-top: 25px;
+      margin-top: 30px;
       display: flex;
-      justify-content: center;
-      gap: 20px;
+      flex-direction: column;
+      gap: 15px;
     }
-    
+
     .social-links a {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
+      padding: 12px;
+      border-radius: 50px;
       background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       color: white;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    
+
+    .social-links a i {
+      margin-left: 8px;
+      font-size: 18px;
+    }
+
     .social-links a:hover {
-      transform: translateY(-5px) scale(1.1);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
   <div class="card">
     <div class="logo-container">
-      <img src="https://raw.githubusercontent.com/abhadesign47-design/dar-altawabil-card/c5facbcd22fd8674a6ae8cd17699bc867912d36d/jpg.jpg" 
+      <img src="https://github.com/abhadesign47-design/dar-altawabil-card/blob/5f0539e88c736cd42143e8e00d9dd3580bb1029d/dar%20altawabel%20copy.jpg?raw=true" 
            alt="شعار دار التوابل" class="logo">
     </div>
     <h1>دار التوابل</h1>
-    
     <p class="tagline">محل دار التوابل يقدم لكم أجود أنواع التوابل والبهارات من أجل مذاق أفضل – مرحبًا بكم</p>
-    
+
     <div class="contact-info">
       <div class="contact-card">
         <span>محل بلقايد</span>
@@ -176,14 +178,12 @@
         <a href="tel:+213549356033" class="phone-btn"><i class="fas fa-phone"></i> 0549356033</a>
       </div>
     </div>
-    
+
     <div class="social-links">
-      <a href="https://www.facebook.com/epicesmaison31" target="_blank" title="فيسبوك">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/maisondesepices31" target="_blank" title="إنستغرام">
-        <i class="fab fa-instagram"></i>
-      </a>
+      <a href="https://dar-attawabil.com/" target="_blank"><i class="fas fa-globe"></i> الموقع الرسمي</a>
+      <a href="https://www.facebook.com/epicesmaison31" target="_blank"><i class="fab fa-facebook-f"></i> فيسبوك</a>
+      <a href="https://www.instagram.com/maisondesepices31" target="_blank"><i class="fab fa-instagram"></i> إنستغرام</a>
+      <a href="https://wa.me/213554331415" target="_blank"><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a>
     </div>
   </div>
 </body>
