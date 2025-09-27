@@ -18,114 +18,200 @@
     body { 
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
       text-align: center; 
-      padding: 30px; 
-      background-color: #f9f9f9;
+      padding: 20px; 
+      background: linear-gradient(135deg, #f5f5dc 0%, #e6d9c5 100%);
       direction: rtl;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
     }
     
     .card { 
       border: 2px solid var(--primary-color); 
-      padding: 25px; 
-      border-radius: 15px; 
+      padding: 30px; 
+      border-radius: 20px; 
       display: inline-block;
       background-color: white;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      max-width: 400px;
+      box-shadow: 0 10px 30px rgba(139, 69, 19, 0.2);
+      max-width: 450px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--primary-color));
     }
     
     .logo-container {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: rgba(245, 245, 220, 0.3);
     }
     
     .logo {
-      max-width: 120px;
+      max-width: 180px;
       height: auto;
-      border-radius: 10px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .logo:hover {
+      transform: scale(1.05);
     }
     
     h1 { 
       color: var(--primary-color); 
-      margin-bottom: 20px;
-      font-size: 28px;
+      margin-bottom: 25px;
+      font-size: 32px;
       border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 10px;
+      padding-bottom: 12px;
+      position: relative;
     }
     
-    p { 
-      margin: 12px 0; 
-      color: var(--text-color);
-      font-size: 16px;
+    h1::after {
+      content: "✦";
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 0 10px;
+      color: var(--accent-color);
+      font-size: 20px;
     }
     
     .contact-info {
       text-align: right;
-      margin: 15px 0;
+      margin: 20px 0;
     }
     
     .contact-info div {
-      margin: 10px 0;
+      margin: 15px 0;
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      padding: 8px 0;
+      border-bottom: 1px dashed #e0e0e0;
     }
     
     .contact-info i {
-      margin-left: 10px;
+      margin-left: 12px;
       color: var(--secondary-color);
-      width: 20px;
+      width: 22px;
+      font-size: 18px;
+    }
+    
+    .phone-number {
+      font-weight: bold;
+      color: var(--primary-color);
+      direction: ltr;
+      display: inline-block;
     }
     
     .social-links {
-      margin-top: 20px;
+      margin-top: 25px;
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 20px;
     }
     
     .social-links a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
       border-radius: 50%;
-      background-color: var(--primary-color);
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       color: white;
       transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     
     .social-links a:hover {
-      background-color: var(--secondary-color);
-      transform: translateY(-3px);
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
     
     .location {
       font-weight: bold;
       color: var(--primary-color);
+      min-width: 100px;
+      text-align: left;
+    }
+    
+    .tagline {
+      color: var(--secondary-color);
+      font-style: italic;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px;
+        margin: 10px;
+      }
+      
+      h1 {
+        font-size: 26px;
+      }
+      
+      .logo {
+        max-width: 140px;
+      }
+      
+      .contact-info div {
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+      }
+      
+      .location {
+        margin-bottom: 5px;
+        text-align: right;
+      }
     }
   </style>
 </head>
 <body>
   <div class="card">
     <div class="logo-container">
-      <img src="dar-altawabel-copy.jpg" alt="شعار دار التوابل" class="logo">
+      <img src="https://raw.githubusercontent.com/abhadesign47-design/dar-altawabil-card/c5facbcd22fd8674a6ae8cd17699bc867912d36d/jpg.jpg" 
+           alt="شعار دار التوابل" class="logo">
     </div>
     <h1>دار التوابل</h1>
+    
+    <p class="tagline">نكهات تروي قصة، توابل تعيد الذكرى</p>
     
     <div class="contact-info">
       <div>
         <i class="fas fa-map-marker-alt"></i>
-        <span class="location">محل بلقايد:</span> 0554331415
+        <span class="location">محل بلقايد:</span>
+        <span class="phone-number">0554331415</span>
       </div>
       
       <div>
         <i class="fas fa-map-marker-alt"></i>
-        <span class="location">محل مسرغين:</span> 0775982385
+        <span class="location">محل مسرغين:</span>
+        <span class="phone-number">0775982385</span>
       </div>
       
       <div>
         <i class="fas fa-map-marker-alt"></i>
-        <span class="location">محل مرفال:</span> 0549356033
+        <span class="location">محل مرفال:</span>
+        <span class="phone-number">0549356033</span>
       </div>
     </div>
     
@@ -136,6 +222,9 @@
       <a href="https://www.instagram.com/maisondesepices31" target="_blank" title="إنستغرام">
         <i class="fab fa-instagram"></i>
       </a>
+      <a href="tel:+213554331415" title="اتصل بنا">
+        <i class="fas fa-phone"></i>
+      </a>
     </div>
   </div>
 
@@ -145,10 +234,25 @@
       item.addEventListener('mouseover', function() {
         this.style.transform = 'translateX(-5px)';
         this.style.transition = 'transform 0.2s ease';
+        this.style.backgroundColor = 'rgba(245, 245, 220, 0.3)';
+        this.style.borderRadius = '5px';
+        this.style.paddingRight = '10px';
       });
       
       item.addEventListener('mouseout', function() {
         this.style.transform = 'translateX(0)';
+        this.style.backgroundColor = 'transparent';
+        this.style.paddingRight = '0';
+      });
+    });
+    
+    // إضافة تأثير النقر على أرقام الهاتف
+    document.querySelectorAll('.phone-number').forEach(phone => {
+      phone.addEventListener('click', function() {
+        this.style.color = 'var(--secondary-color)';
+        setTimeout(() => {
+          this.style.color = 'var(--primary-color)';
+        }, 300);
       });
     });
   </script>
