@@ -1,25 +1,152 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>بطاقتي التعريفية</title>
+  <title>دار التوابل - بطاقتي التعريفية</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 30px; }
-    .card { border: 2px solid #444; padding: 20px; border-radius: 10px; display: inline-block; }
-    h1 { color: #2c3e50; }
-    p { margin: 8px 0; }
-    a { color: #2980b9; text-decoration: none; }
+    /* تخصيص الألوان وفقًا للعلامة التجارية لدار التوابل */
+    :root {
+      --primary-color: #8B4513; /* بني خشبي */
+      --secondary-color: #D2691E; /* بني فاتح */
+      --accent-color: #CD853F; /* بني ذهبي */
+      --text-color: #333;
+      --light-color: #F5F5DC; /* بيج فاتح */
+    }
+    
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      text-align: center; 
+      padding: 30px; 
+      background-color: #f9f9f9;
+      direction: rtl;
+    }
+    
+    .card { 
+      border: 2px solid var(--primary-color); 
+      padding: 25px; 
+      border-radius: 15px; 
+      display: inline-block;
+      background-color: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+    
+    h1 { 
+      color: var(--primary-color); 
+      margin-bottom: 20px;
+      font-size: 28px;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+    }
+    
+    .logo {
+      font-size: 40px;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    
+    p { 
+      margin: 12px 0; 
+      color: var(--text-color);
+      font-size: 16px;
+    }
+    
+    .contact-info {
+      text-align: right;
+      margin: 15px 0;
+    }
+    
+    .contact-info div {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    
+    .contact-info i {
+      margin-left: 10px;
+      color: var(--secondary-color);
+      width: 20px;
+    }
+    
+    .social-links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+    
+    .location {
+      font-weight: bold;
+      color: var(--primary-color);
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>اسمك الكامل</h1>
-    <p><strong>المؤسسة:</strong> ABHA Creative</p>
-    <p><strong>الهاتف:</strong> +213 555 555 555</p>
-    <p><strong>الإيميل:</strong> example@email.com</p>
-    <p><strong>الموقع:</strong> <a href="https://abha-creative.com" target="_blank">abha-creative.com</a></p>
+    <div class="logo">
+      <i class="fas fa-pepper-hot"></i>
+    </div>
+    <h1>دار التوابل</h1>
+    
+    <div class="contact-info">
+      <div>
+        <i class="fas fa-map-marker-alt"></i>
+        <span class="location">محل بلقايد:</span> 0554331415
+      </div>
+      
+      <div>
+        <i class="fas fa-map-marker-alt"></i>
+        <span class="location">محل مسرغين:</span> 0775982385
+      </div>
+      
+      <div>
+        <i class="fas fa-map-marker-alt"></i>
+        <span class="location">محل مرفال:</span> 0549356033
+      </div>
+    </div>
+    
+    <div class="social-links">
+      <a href="https://www.facebook.com/epicesmaison31" target="_blank" title="فيسبوك">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/maisondesepices31" target="_blank" title="إنستغرام">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
   </div>
+
+  <script>
+    // إضافة تأثيرات تفاعلية بسيطة
+    document.querySelectorAll('.contact-info div').forEach(item => {
+      item.addEventListener('mouseover', function() {
+        this.style.transform = 'translateX(-5px)';
+        this.style.transition = 'transform 0.2s ease';
+      });
+      
+      item.addEventListener('mouseout', function() {
+        this.style.transform = 'translateX(0)';
+      });
+    });
+  </script>
 </body>
 </html>
-
