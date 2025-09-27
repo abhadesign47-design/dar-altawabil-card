@@ -3,188 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>دار التوابل - البطاقة التعريفية</title>
-  <!-- استدعاء أيقونات -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- خط عربي أنيق -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+  <title>دار التوابل</title>
   <style>
-    :root {
-      --primary-color: #7B3F00; /* بني غامق من الشعار */
-      --secondary-color: #C68642; /* بني فاتح ذهبي */
-      --accent-color: #F4E1C1; /* بيج */
-      --text-color: #2c2c2c;
-    }
-
     body {
-      font-family: 'Cairo', sans-serif;
-      text-align: center;
-      padding: 20px;
-      background: linear-gradient(135deg, #fdf8f3 0%, #f2e7da 100%);
-      direction: rtl;
-      min-height: 100vh;
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #faf7f2;
+      color: #333;
+    }
+    header {
+      position: relative;
+      width: 100%;
+      height: 280px;
+      background: url("https://raw.githubusercontent.com/abhadesign47-design/dar-altawabil-card/5f0539e88c736cd42143e8e00d9dd3580bb1029d/dar%20altawabel%20copy.jpg") no-repeat center center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0;
     }
-
-    .card {
-      border: 2px solid var(--primary-color);
-      padding: 30px;
-      border-radius: 20px;
-      display: inline-block;
-      background-color: #fff;
-      box-shadow: 0 10px 25px rgba(123, 63, 0, 0.2);
-      max-width: 500px;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 5px;
-      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
-    }
-
-    .logo-container {
-      margin-bottom: 20px;
-    }
-
-    .logo {
-      max-width: 200px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    h1 {
-      color: var(--primary-color);
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .tagline {
-      color: var(--secondary-color);
-      font-size: 16px;
-      margin-bottom: 25px;
+    header h1 {
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 8px;
+      font-size: 26px;
       font-weight: bold;
     }
-
-    .contact-info {
-      margin: 25px 0;
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+    section p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #4b2e1e;
+      font-weight: bold;
+    }
+    .contacts {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 12px;
+      max-width: 350px;
+      margin: 0 auto 20px;
     }
-
-    .contact-card {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 15px;
-      border-radius: 12px;
-      background: #fff;
-      border: 1px solid #eee;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .contact-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-    }
-
-    .contact-card span {
-      font-weight: 600;
-      color: var(--text-color);
-    }
-
-    .phone-btn {
-      background: var(--primary-color);
-      color: white;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.3s ease;
-    }
-
-    .phone-btn:hover {
-      background: var(--secondary-color);
-    }
-
-    .social-links {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .social-links a {
+    .contact-btn {
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 10px;
       padding: 12px;
-      border-radius: 50px;
-      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-      color: white;
+      background: #d4a373;
+      color: #fff;
       font-size: 16px;
-      font-weight: 600;
+      border-radius: 6px;
       text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: background 0.3s ease;
+      font-weight: bold;
     }
-
-    .social-links a i {
-      margin-left: 8px;
-      font-size: 18px;
+    .contact-btn:hover {
+      background: #b07a50;
     }
-
-    .social-links a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    .contact-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+    footer {
+      background: #4b2e1e;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
+    }
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="logo-container">
-      <img src="https://github.com/abhadesign47-design/dar-altawabil-card/blob/5f0539e88c736cd42143e8e00d9dd3580bb1029d/dar%20altawabel%20copy.jpg?raw=true" 
-           alt="شعار دار التوابل" class="logo">
-    </div>
-    <h1>دار التوابل</h1>
-    <p class="tagline">محل دار التوابل يقدم لكم أجود أنواع التوابل والبهارات من أجل مذاق أفضل – مرحبًا بكم</p>
 
-    <div class="contact-info">
-      <div class="contact-card">
-        <span>محل بلقايد</span>
-        <a href="tel:+213554331415" class="phone-btn"><i class="fas fa-phone"></i> 0554331415</a>
-      </div>
-      <div class="contact-card">
-        <span>محل مسرغين</span>
-        <a href="tel:+213775982385" class="phone-btn"><i class="fas fa-phone"></i> 0775982385</a>
-      </div>
-      <div class="contact-card">
-        <span>محل مرفال</span>
-        <a href="tel:+213549356033" class="phone-btn"><i class="fas fa-phone"></i> 0549356033</a>
-      </div>
-    </div>
+  <header>
+    <h1>محل دار التوابل</h1>
+  </header>
 
-    <div class="social-links">
-      <a href="https://dar-attawabil.com/" target="_blank"><i class="fas fa-globe"></i> الموقع الرسمي</a>
-      <a href="https://www.facebook.com/epicesmaison31" target="_blank"><i class="fab fa-facebook-f"></i> فيسبوك</a>
-      <a href="https://www.instagram.com/maisondesepices31" target="_blank"><i class="fab fa-instagram"></i> إنستغرام</a>
-      <a href="https://wa.me/213554331415" target="_blank"><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a>
+  <section>
+    <p>محل دار التوابل يقدم لكم أجود أنواع التوابل والبهارات من أجل مذاق أفضل – مرحباً بكم 🌿</p>
+
+    <div class="contacts">
+      <a class="contact-btn" href="tel:0554331415">
+        <!-- أيقونة هاتف -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.534 15.534 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 21 3 13.93 3 5.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/></svg>
+        محل بلقايد – 0554331415
+      </a>
+      <a class="contact-btn" href="tel:0775982385">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.534 15.534 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 21 3 13.93 3 5.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/></svg>
+        محل مسرغين – 0775982385
+      </a>
+      <a class="contact-btn" href="tel:0549356033">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.534 15.534 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 21 3 13.93 3 5.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/></svg>
+        محل مرفال – 0549356033
+      </a>
     </div>
-  </div>
+  </section>
+
+  <footer>
+    <p>🌐 موقعنا: <a href="https://dar-attawabil.com/" target="_blank">dar-attawabil.com</a></p>
+  </footer>
+
 </body>
 </html>
